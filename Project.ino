@@ -7,8 +7,8 @@
 #include "esp_wifi.h"
 String kill;
 String readString;
-const char* ssid = "#######";//wifi name
-const char* password = "#######";//wifi password
+const char* ssid = "#######";//SSID
+const char* password = "#######";//PASSWORD
 const char* host = "script.google.com";
 const int httpsPort = 443;
 WiFiClientSecure client;
