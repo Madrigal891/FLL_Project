@@ -140,7 +140,7 @@ void updatetime() { // This updates the time the device has been online for
   }
 }
 
-String people() { // This checks if the MAC is in the  list and then displays it on the OLED and/or prints it to serial.
+String people() { //formats the data with commas 
     String tbp = "";
   for (int i = 0; i <= listcount - 2; i++) {
     tbp += maclist[i][0] + ",";
@@ -153,7 +153,7 @@ return tbp;
 
 
 void loop() {
-  kill=people();
+  kill=people();//was not in a good mood while writing the code
   //SerialString .println("Changed channel:" + String(curChannel));
   if (curChannel > maxCh) {
     curChannel = 1;
@@ -166,7 +166,7 @@ curChannel++;
   if (millis()>300000||Serial.available()){  sendData(listcount,kill);
   ESP.restart();}
 }
-void sendData(int x, String y)
+void sendData(int x, String y) //almost verbatim copied with some slight modifications like the status indicators for debugging
 {
  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
