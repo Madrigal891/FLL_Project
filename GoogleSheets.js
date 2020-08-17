@@ -46,4 +46,4 @@ function doGet(e) {
 */
 function stripQuotes( value ) {
   return value.replace(/^["']|['"]$/g, "");
-}
+ }
