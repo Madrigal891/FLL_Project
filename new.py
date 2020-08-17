@@ -43,5 +43,4 @@ performance = [10,8,6,4,2,1]
 
 plt.plot(gaming,yax,
          gaming,yax,'ok')
-
 plt.show()
